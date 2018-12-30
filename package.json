@@ -1,0 +1,17 @@
+{
+  "name": "manual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convertman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "reason": "^3.3.4",
+    "turndown": "^5.0.1",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}

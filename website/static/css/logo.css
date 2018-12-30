@@ -1,0 +1,42 @@
+/* commencing epic hack to animate header logo */
+/* our header logo image is intentionally absent. We substitute it with a css-drawn logo that looks similar to the Reason logo */
+/* this way we can animate it and turn the label RE into REI */
+/* currently we can't access the header logo config in userland (we use docusaurus). That's why we do it this way */
+.fixedHeaderContainer header > a > img {
+  display: none;
+}
+.fixedHeaderContainer header > a::before {
+  /* this is the frame */
+  border: 2px solid white;
+  border-radius: 2px;
+  position: absolute;
+  display: block;
+  width: 34px;
+  height: 34px;
+  content: "";
+}
+.fixedHeaderContainer header > a::after {
+  /* the default sans-serif font at this weight is close enough to Montserrat used in the actual Reason logo */
+  /* this font config avoids us needing to load the entire Montserrat font just for this effect */
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  content: ' ';
+  background-image: url('../img/whiteCamel200.png');
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+  background-position: 0px 0px; 
+  border-radius: 2px;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 10px;
+  top: 10px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.31, 1.16);
+}
+.fixedHeaderContainer header > a:hover::after {
+  width: 34px;
+  /* rounding is different on safari and chrome. This is the best number. Not 4, not 6 */
+  left: 5px;
+
