@@ -4,6 +4,16 @@
 
 This is a Reason version of the official OCaml language manual.
 
+### Why:
+Just to make reading the OCaml manual easier for Reason developers.
+This isn't supposed to be "The Reason Manual" at all. It will largely
+be a subset of the OCaml manual, removing anything related to syntax,
+ocamlbuild, and other less-useful things. It will mostly be a language
+guide for the type system, compiler, and most of the OCaml standard
+library.
+
+### What:
+
 This will not contain a modified version of the OCaml language manual but will
 contain a build process that can generate Reason-ified versions of arbitrary
 manual versions.
