@@ -25,12 +25,14 @@ before converting them.
 Generating the markdown files into `docs/`.
 ```
 yarn install
+mkdir -p docs/libref
 node convertman.js
 ```
 
 Starting the server:
 ```
-mkdir -p docs/libref
+
 cd website
+yarn install
 npm start
 ```
